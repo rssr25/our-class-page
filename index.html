@@ -18,35 +18,91 @@
   }
   h1 { font-size: 44px; margin: 0; text-align: center; }
   p.sub { font-weight: bold; opacity: .7; text-align: center; }
-  ul {
-    list-style: none;
-    padding: 0;
-    width: min(480px, 100%);
+
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: min(1100px, 100%);
+    margin-top: 20px;
+    align-items: start;
   }
-  li {
+  @media (max-width: 800px) {
+    .board { grid-template-columns: 1fr; }
+  }
+
+  .column {
     background: #fff;
     border: 3px solid #1E2B4D;
     border-radius: 16px;
     box-shadow: 5px 5px 0 #1E2B4D;
-    padding: 14px 18px;
-    margin: 12px 0;
-    font-size: 22px;
-    font-weight: bold;
+    padding: 16px;
   }
+  .column h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    text-align: center;
+    border-bottom: 3px dashed #1E2B4D;
+    padding-bottom: 8px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    background: #FFF7E0;
+    border: 2px solid #1E2B4D;
+    border-radius: 12px;
+    padding: 10px 12px;
+    margin: 8px 0;
+    font-size: 18px;
+    font-weight: bold;
+    word-break: break-word;
+  }
+
   footer { margin-top: 30px; font-size: 14px; opacity: .6; font-weight: bold; }
 </style>
 </head>
 <body>
 
-<h1>🤖 Our Class Robots</h1>
+<h1>🤖 What do we know about AI?</h1>
 <p class="sub">Built together on GitHub — one commit at a time!</p>
 
-<ul>
-  <li>🦄 Example Kid — my robot would fetch snacks</li>
+<div class="board">
 
-  <!-- ✏️ ADD YOUR NAME BELOW THIS LINE! Copy the line above and change it. -->
+  <section class="column">
+    <h2>Jana</h2>
+    <ul>
+      <li>💡 Example Kid — AI can talk like a person</li>
 
-</ul>
+      <!-- ✏️ GROUP 1: Add your answer below this line!
+           Copy the line above, change the name and the answer,
+           then commit your change. -->
+
+    </ul>
+  </section>
+
+  <section class="column">
+    <h2>Jakob</h2>
+    <ul>
+
+      <!-- ✏️ GROUP 2: Add your answer below this line! -->
+
+    </ul>
+  </section>
+
+  <section class="column">
+    <h2>Leana</h2>
+    <ul>
+
+      <!-- ✏️ GROUP 3: Add your answer below this line! -->
+
+    </ul>
+  </section>
+
+</div>
 
 <footer>Every change to this page is saved forever in the commit history ⏳</footer>
 
